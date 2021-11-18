@@ -26,24 +26,24 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private long id;
-    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
-    @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
+//    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
+//    @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
     private String username;
-    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
-    @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
+//    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
+//    @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
     private String firstName;
-    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
-    @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
+//    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
+//    @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
     private String lastName;
-    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
-    @Size(min = 6, max = 100,  message = ErrorMessageManager.EMAIL_USER_ERROR)
-    @Pattern(regexp = Patterns.EMAIL, message = ErrorMessageManager.EMAIL_USER_ERROR)
+//    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
+//    @Size(min = 6, max = 100,  message = ErrorMessageManager.EMAIL_USER_ERROR)
+//    @Pattern(regexp = Patterns.EMAIL, message = ErrorMessageManager.EMAIL_USER_ERROR)
     private String email;
-    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
-    @Pattern(regexp = Patterns.PASSWORD, message = ErrorMessageManager.PASSWORD_USER_ERROR)
+//    @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
+//    @Pattern(regexp = Patterns.PASSWORD, message = ErrorMessageManager.PASSWORD_USER_ERROR)
     private String password;
-    @NotBlank
-    @Size(min = 9, max = 12, message = ErrorMessageManager.SIZE_ERROR)
+//    @NotBlank
+//    @Size(min = 9, max = 12, message = ErrorMessageManager.SIZE_ERROR)
     private String telephone;
     private String picture;
     private Role role;

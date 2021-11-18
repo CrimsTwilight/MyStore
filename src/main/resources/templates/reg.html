@@ -6,12 +6,47 @@
 </head>
 <body>
 <div th:insert="fragments/header.html :: header"></div>
-<form th:action="@{user/reg}" th:object="${newUser}" method="post">
-    <input type="text" th:field="*{firstName}" placeholder="First Name">
-    <input type="text" th:field="*{lastName}" placeholder="Last Name">
-    <input type="text" th:field="*{username}" placeholder="Username">
-    <input type="password" th:field="*{password}" placeholder="Password">
-    <button>Submit</button>
-</form>
+<div class="container">
+    <div class="row justify-content-center" >
+        <div class="col-sm-3 text-white" style="padding: 20px 20px 20px; border-radius:8px; background: var(--bs-dark); margin-top: 40px" >
+            <form th:action="@{/user/reg}" th:object="${newUser}" method="post">
+                <div class="mb-3" >
+                    <input type="text" th:field="*{username}" class="form-control"  aria-describedby="emailHelp" required placeholder="Username">
+<!--                    <p th:if="${#fields.hasErrors('name')}" th:errors="*{username}"></p>-->
+                </div>
+                <div class="mb-3" >
+                    <input type="text" th:field="*{firstName}" class="form-control"  aria-describedby="emailHelp" required placeholder="First Name">
+                    <!--                    <p th:if="${#fields.hasErrors('name')}" th:errors="*{username}"></p>-->
+                </div>
+                <div class="mb-3" >
+                    <input type="text" th:field="*{lastName}" class="form-control"  aria-describedby="emailHelp" required placeholder="Last Name">
+                    <!--                    <p th:if="${#fields.hasErrors('name')}" th:errors="*{username}"></p>-->
+                </div>
+                <div class="mb-3">
+                    <input type="text" th:field="*{email}" class="form-control"  aria-describedby="emailHelp" required placeholder="Email">
+<!--                    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>-->
+                </div>
+                <div class="mb-3">
+                    <input type="password" th:field="*{password}" class="form-control" aria-describedby="passwordHelp" required placeholder="Password">
+<!--                    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>&ndash;&gt;-->
+                </div>
+                <div class="mb-3" >
+                    <input type="text" th:field="*{telephone}" class="form-control"  aria-describedby="emailHelp" required placeholder="Telephone">
+                    <!--                    <p th:if="${#fields.hasErrors('number')}" th:errors="*{telephone}"></p>-->
+                </div>
+                <div class="mb-3" >
+                    <input type="text" th:field="*{picture}" class="form-control"  aria-describedby="emailHelp" required placeholder="Photo for profile (URL)">
+<!--                    <p th:if="${#fields.hasErrors('picture')}" th:errors="*{picture}"></p>-->
+                </div>
+                <div style="text-align:center">
+                    <button type="submit" class="btn btn-warning" style="">Sign Up</button>
+                </div>
+            </form>
+<!--            <div th:if="${messageReg != null}" class="alert alert-warning mt-3" role="alert">-->
+<!--                <p th:text="*{messageReg}"></p>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
 </body>
 </html>

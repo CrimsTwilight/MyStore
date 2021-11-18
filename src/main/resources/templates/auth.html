@@ -5,10 +5,28 @@
   <title>Authorization</title>
 </head>
 <body>
-<form th:action="@{/user/auth}" method="post">
-  <input type="text" name="username" placeholder="Username">
-  <input type="password" name="password" placeholder="Password">
-  <button>Submit</button>
-</form>
+<div th:insert="fragments/header.html :: header"></div>
+<div class="container">
+  <div class="row justify-content-center" >
+    <div class="col-sm-3" style="padding: 20px 20px 20px; border-radius:8px; background: var(--bs-dark); margin-top: 40px" >
+      <form action="/login" method="post">
+        <div class="mb-3">
+          <input type="text text-white" name="email" class="form-control"  aria-describedby="emailHelp" required placeholder="Login">
+<!--          <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>-->
+        </div>
+        <div class="mb-3">
+          <input type="password" name="password" class="form-control" aria-describedby="passwordHelp" required placeholder="Password">
+<!--          <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>-->
+        </div>
+        <div style="text-align:center">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+        </div>
+      </form>
+<!--      <div th:if="${messageAuth != null}" class="alert alert-warning mt-3" role="alert">-->
+<!--        <p th:text="*{messageAuth}"></p>-->
+<!--      </div>-->
+    </div>
+  </div>
+</div>
 </body>
 </html>

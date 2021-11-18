@@ -3,7 +3,6 @@ package by.crims.mystore.service;
 import by.crims.mystore.entity.Role;
 import by.crims.mystore.entity.User;
 import by.crims.mystore.repository.UserRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
