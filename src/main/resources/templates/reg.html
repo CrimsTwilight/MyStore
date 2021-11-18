@@ -5,6 +5,7 @@
     <title>Registration</title>
 </head>
 <body>
+<div th:insert="fragments/header.html :: header"></div>
 <form th:action="@{user/reg}" th:object="${newUser}" method="post">
     <input type="text" th:field="*{firstName}" placeholder="First Name">
     <input type="text" th:field="*{lastName}" placeholder="Last Name">

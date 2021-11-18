@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -25,7 +27,7 @@ public class UserController {
     }
 
     @PostMapping("/reg")
-    public ModelAndView reg(@ModelAttribute("newUser") User user, ModelAndView modelAndView){
+    public ModelAndView reg(@Valid @ModelAttribute("newUser") User user, ModelAndView modelAndView){
         modelAndView.setViewName("reg");
         userService.save(user);
         return modelAndView;

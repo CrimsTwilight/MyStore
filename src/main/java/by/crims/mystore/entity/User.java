@@ -28,7 +28,7 @@ public class User implements UserDetails {
     private long id;
     @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
     @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
-    private String userName;
+    private String username;
     @NotBlank(message = ErrorMessageManager.BLANK_FIELD_ERROR)
     @Size(min = 2, max = 30, message = ErrorMessageManager.NAME_USER_ERROR)
     private String firstName;
@@ -72,7 +72,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Override
