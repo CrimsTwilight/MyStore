@@ -6,6 +6,7 @@ import by.crims.mystore.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -98,6 +99,10 @@ public class ProductService {
         } else {
             return false;
         }
+    }
+
+    public List<Product> getAll(){
+        return productRepository.findAll();
     }
 
     public Optional<Product> getById(long id) {

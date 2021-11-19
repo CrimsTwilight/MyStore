@@ -35,7 +35,7 @@ public class UserController {
 
     @GetMapping("/updFirstName")
     public ModelAndView updateFirstName(ModelAndView modelAndView) {
-        modelAndView.setViewName("updFirstName");
+        modelAndView.setViewName("updateFirstName");
         modelAndView.addObject("userNameDTO", new FirstNameUserDTO());
         return modelAndView;
     }
@@ -43,7 +43,7 @@ public class UserController {
     @PostMapping("/updFirstName")
     public ModelAndView updateFirstName(@Valid @ModelAttribute("userNameDTO") FirstNameUserDTO firstNameDTO,
                                         BindingResult bindingResult, ModelAndView modelAndView) {
-        modelAndView.setViewName("updFirstName");
+        modelAndView.setViewName("updateFirstName");
         if (bindingResult.hasErrors()) {
             return modelAndView;
         }else{

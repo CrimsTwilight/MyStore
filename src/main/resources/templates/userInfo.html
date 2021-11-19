@@ -23,15 +23,8 @@
           <li class="list-group-item"><b>telephone: +</b><span th:text="${userInfoDTO.user.telephone.number}"></span></li>
           <li class="list-group-item"><b>email: </b><span th:text="${userInfoDTO.user.email}"></span></li>
         </ul>
-        <div th:if="${#strings.contains(#authentication.principal ,'USER')}"  style="text-align: center; margin-top: 20px">
-          <a th:href="@{/user/userAccount/getTask}" type="submit" class="btn btn-success">Ok</a>
-        </div>
-        <div th:if="${#strings.contains(#authentication.principal ,'EXECUTOR')}"  style="text-align: center; margin-top: 20px">
-          <a th:href="@{/executor/executorAccount/getTask}" type="submit" class="btn btn-success">Ok</a>
-        </div>
       </div>
     </div>
-    <div class="col" style="background: #f5f5f5"></div>
   </div>
 </div>
 </body>

@@ -12,30 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
-//@Controller
-//@RequestMapping("/user")
-//public class SellerController {
-//
-//    @Autowired
-//    private UserService userService;
-//
-//    @GetMapping("/reg")
-//    public ModelAndView reg(ModelAndView modelAndView){
-//        modelAndView.setViewName("reg");
-//        modelAndView.addObject("newUser", new User());
-//        return modelAndView;
-//    }
-//
-//    @PostMapping("/reg")
-//    public ModelAndView reg(@Valid @ModelAttribute("newUser") User user, ModelAndView modelAndView){
-//        modelAndView.setViewName("reg");
-//        userService.save(user);
-//        return modelAndView;
-//    }
-//
-//    @GetMapping("/auth")
-//    public ModelAndView auth(ModelAndView modelAndView){
-//        modelAndView.setViewName("auth");
-//        return modelAndView;
-//    }
-//}
+@Controller
+@RequestMapping("/cellers")
+public class SellerController {
+}

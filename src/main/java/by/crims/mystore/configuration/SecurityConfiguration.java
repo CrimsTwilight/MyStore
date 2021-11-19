@@ -24,6 +24,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/", "/guest/registration").permitAll()
+                .antMatchers("/guest/**").permitAll()
+                .antMatchers("/user/**").permitAll()
+                .antMatchers("/product/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -33,18 +36,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .logout().permitAll();
     }
 
-//    @Override
-//    public void configure(WebSecurity web) throws Exception {
-//        web.ignoring()
-//                .antMatchers("/scripts/**")
-//                .antMatchers("/styles/**")
-//                .antMatchers("/images/**")
-//                .antMatchers("/fonts/**");
-//    }
-
     @Autowired
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService).passwordEncoder(passwordEncoder());
+        auth.inMemoryAuthentication()
+                .withUser("test")
+                .password(passwordEncoder().encode("test"))
+                .roles("USER");
     }
 
     @Bean

@@ -13,7 +13,7 @@
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="#" class="nav-link px-2 text-secondary" onclick=location.href="/">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Catalog</a></li>
+                <li><a href="/product/all" class="nav-link px-2 text-white">Catalog</a></li>
                 <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
                 <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             </ul>
@@ -32,7 +32,9 @@
                     <img src="https://e7.pngegg.com/pngimages/491/220/png-clipart-woman-question-mark-mysterious-people-woman.png" alt="mdo" width="50" height="50" class="rounded-circle border border-white">
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="/user/updFirstName">Edit first name</a></li>
+                    <li><a class="dropdown-item" th:href="@{/userInfo}">Account</a></li>
+                    <li><a class="dropdown-item" href="#">Edit First Name</a></li>
+                    <li><a class="dropdown-item" href="#">Edit Last Name</a></li>
                     <li><a class="dropdown-item" href="#">Edit password</a></li>
                     <li><a class="dropdown-item" href="#">Edit picture</a></li>
                     <li><hr class="dropdown-divider"></li>

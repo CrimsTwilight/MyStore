@@ -1,5 +1,6 @@
 package by.crims.mystore.utils;
 
+import by.crims.mystore.dto.cardDTO.ProductCardDTO;
 import by.crims.mystore.dto.productDTO.AllArgsProductDTO;
 import by.crims.mystore.dto.telephoneDTO.NumberTelDTO;
 import by.crims.mystore.dto.userDTO.AllArgsUserDTO;
@@ -62,6 +63,12 @@ public class ConverterDTO {
                 .telephone(user.getTelephone())
                 .picture(user.getPicture())
                 .build())
+                .build();
+    }
+
+    public static ProductCardDTO getProductCardDto(Product product){
+        return ProductCardDTO.builder()
+                .product(product)
                 .build();
     }
 
