@@ -8,4 +8,5 @@ public class ErrorMessageManager {
             "1 lowercase letter, and 1 number with no spaces.";
     public static final String SIZE_ERROR = "Please enter a number of length from 9 to 12!";
     public static final String BLANK_FIELD_ERROR = "Field must not be empty!";
+    public static final String PICTURE_ERROR = "Enter a correct URL picture!";
 }

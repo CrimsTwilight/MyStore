@@ -12,24 +12,30 @@ import java.util.Objects;
 @Table(name = "products")
 @Builder
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @Column(nullable = false)
     private String name;
+
     @Column(nullable = false)
     private String description;
+
     @Enumerated(EnumType.ORDINAL)
     @Column(nullable = false)
     private CategoryOfProduct category;
+
     @ManyToOne(fetch = FetchType.EAGER)
     private Seller seller;
+
     @Column(nullable = false)
     private String picture;
+
     @Column(nullable = false)
     private double price;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private User owner;
+
     private boolean reservedStatus;
     private boolean saleStatus;
 
@@ -55,7 +61,7 @@ public class Product {
                 ", category=" + category +
                 ", picture='" + picture + '\'' +
                 ", price=" + price +
-                ", owner=" + owner +
+                ", seller=" + seller +
                 ", reservedStatus=" + reservedStatus +
                 ", saleStatus=" + saleStatus +
                 '}';
